@@ -1,7 +1,7 @@
 <template>
   <div id="map">
     <v-map :zoom=13 :center="[60.192059, 24.945831]">
-      <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
+      <v-tilelayer url="http://api.digitransit.fi/map/v1/hsl-map/{z}/{x}/{y}.png"></v-tilelayer>
       <v-marker v-on:l-click="selectStation(station)" v-for="station in stations" :key="station.stationId" :lat-lng="[station.lat, station.lon]"></v-marker>
     </v-map>
   </div>
